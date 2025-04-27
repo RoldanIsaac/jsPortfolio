@@ -1,11 +1,23 @@
 class Component {
-  constructor(name) {
-    this.name = name;
+  constructor({ styles }) {
+    this.styles = styles || {};
   }
 
-  render() {
-    console.log(`Rendering component: ${this.name}`);
+  async loadStyles() {
+    if (this.styles && this.styles.endsWith(".css")) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = this.styles;
+      document.head.appendChild(link);
+    } else {
+      const styleTag = document.createElement("style");
+      styleTag.innerHTML = this.styles;
+      console.log(styleTag);
+      // document.head.appendChild(styleTag)
+    }
   }
 
-  setStyles(styles) {}
+  async mount() {
+    await this.loadStyles();
+  }
 }

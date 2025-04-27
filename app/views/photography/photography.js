@@ -1,3 +1,9 @@
+const photography = new Component({
+  styles: "app/views/photography/photography.css",
+});
+
+photography.mount();
+
 const photoCard = {
   url: "app/components/photo/photo-card.html",
   destinationId: "galery",
@@ -22,8 +28,3 @@ const myPhotos = [
 ];
 
 domInjector(photoCard.url, photoCard.destinationId, myPhotos);
-
-const link = document.createElement("link");
-link.rel = "stylesheet";
-link.href = "app/views/photography/photography.css";
-document.head.appendChild(link);
