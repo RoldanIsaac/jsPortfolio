@@ -1,0 +1,11 @@
+{
+  "name": "oli-portfolio",
+  "version": "1.0.0",
+  "description": "A best version of me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orlando Llamos Isaac",
+  "license": "ISC"
+}
