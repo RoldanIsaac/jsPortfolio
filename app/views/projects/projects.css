@@ -27,17 +27,30 @@
 
 .projects__cards-container .project-card {
   position: absolute;
+  transition: all 0.3s ease-in-out;
 }
 
-.projects__cards-container > .first-child {
-  transform: rotateZ(-1deg) !important;
-  z-index: 1000 !important;
+/* Transform project cards to create a 3D effect */
+.projects__cards-container > :first-child {
+  top: -45px !important;
+  transform: translate(-90px) rotateZ(-11deg) !important;
 }
 .projects__cards-container > :nth-child(2) {
-  transform: translate(-60px) rotateZ(-7deg) !important;
-  z-index: 950 !important;
+  top: -25px !important;
+  transform: translate(-40px) rotateZ(-4.5deg) !important;
 }
 .projects__cards-container > :last-child {
-  transform: translate(-30px) rotateZ(-4deg) !important;
-  z-index: 900 !important;
+}
+
+/* Hover effect */
+.projects__cards-container:hover > :first-child {
+  top: -45px !important;
+  transform: translate(-120px) rotateZ(-16deg) scale(1.1) !important;
+}
+.projects__cards-container:hover > :nth-child(2) {
+  top: -25px !important;
+  transform: translate(-70px) rotateZ(-9.5deg) scale(1.1) !important;
+}
+.projects__cards-container:hover > :last-child {
+  transform: translate(1px) rotateZ(1deg) scale(1.1) !important;
 }

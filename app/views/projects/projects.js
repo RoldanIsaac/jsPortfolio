@@ -5,19 +5,19 @@ const cardTemplate = {
 
 const cardsData = [
   {
-    title: "SHO MANAGEMENT SYSTEM",
-    imageUrl: "public/screenshoots/sho.png",
-    description: "Descripción de la Card 1",
-  },
-  {
-    title: "Google Services Integration",
+    title: "SHO Management System",
     imageUrl: "public/screenshoots/sho-2.png",
-    description: "Descripción de la Card 2",
+    description: "Descripción de la Card 1",
   },
   {
     title: "Pro Dynamic Web",
     imageUrl: "public/screenshoots/sho-3.png",
     description: "Descripción de la Card 3",
+  },
+  {
+    title: "Google Services Integration",
+    imageUrl: "public/screenshoots/sho.png",
+    description: "Descripción de la Card 2",
   },
 ];
 
