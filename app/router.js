@@ -1,9 +1,5 @@
 const views = [
   {
-    url: "app/components/navbar/navbar.html",
-    destinationId: "navbar-container",
-  },
-  {
     url: "app/views/avatar.html",
     destinationId: "avatar-container",
   },

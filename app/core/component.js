@@ -34,7 +34,6 @@ class Component {
 
   async loadScript() {
     if (typeof this.script === "function") {
-      console.log("ss");
       this.script();
     } else if (this.script && this.script.endsWith(".js")) {
       const scriptTag = document.createElement("script");
