@@ -1,47 +1,63 @@
-fetch("app/components/navbar/navbar.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("navbar-container").innerHTML = data;
-  });
+const views = [
+  {
+    url: "app/components/navbar/navbar.html",
+    destinationId: "navbar-container",
+  },
+  {
+    url: "app/views/avatar.html",
+    destinationId: "avatar-container",
+  },
+  {
+    url: "app/components/tabs/tabs.html",
+    destinationId: "tabs-container",
+  },
+  {
+    url: "app/views/projects/projects.html",
+    destinationId: "projects-container",
+  },
+  {
+    url: "app/views/photography/photography.html",
+    destinationId: "photography-container",
+  },
+  {
+    url: "app/views/skills/skills.html",
+    destinationId: "skills-container",
+  },
+  {
+    url: "app/views/about-me/about-me.html",
+    destinationId: "about-me-container",
+  },
+  {
+    url: "app/views/testimonials/testimonials.html",
+    destinationId: "testimonials-container",
+  },
+  {
+    url: "app/components/footer/footer.html",
+    destinationId: "footer-container",
+  },
+];
 
-fetch("app/views/avatar.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("avatar-container").innerHTML = data;
-  });
+views.forEach(({ url, destinationId, replaceValue }) => {
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Error al cargar ${url}: ${response.statusText}`);
+      }
+      return response.text();
+    })
+    .then((data) => {
+      // Si se proporciona replaceValue, lo utilizamos para modificar el contenido
+      if (replaceValue) {
+        data = data.replace(replaceValue.search, replaceValue.replacement);
+      }
 
-fetch("app/components/tabs/tabs.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("tabs-container").innerHTML = data;
-  });
-
-fetch("app/views/proyects.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("proyects-container").innerHTML = data;
-  });
-
-fetch("app/views/skills/skills.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("skills-container").innerHTML = data;
-  });
-
-fetch("app/views/about-me/about-me.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("about-me-container").innerHTML = data;
-  });
-
-fetch("app/views/testimonials/testimonials.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("testimonials-container").innerHTML = data;
-  });
-
-fetch("app/components/footer/footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("footer-container").innerHTML = data;
-  });
+      document.getElementById(destinationId).innerHTML = data;
+    })
+    .catch((error) => {
+      console.error(error);
+      // Opcional: Puedes insertar un mensaje de error o una estructura predeterminada en el contenedor
+      document.getElementById(
+        destinationId
+      ).innerHTML = `<p>Error al cargar el contenido. Intenta de nuevo más tarde.</p>`;
+    });
+});
