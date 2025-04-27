@@ -1,0 +1,23 @@
+/* Estilo para el avatar (imagen circular) */
+.avatar {
+  width: 150px; /* Ancho de la imagen */
+  height: 150px; /* Alto de la imagen */
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Asegura que la imagen mantenga el aspecto */
+  margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+/* Estilo para el nombre */
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Estilo para la descripción */
+.description {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
