@@ -29,15 +29,15 @@
   position: absolute;
 }
 
-.projects__cards-container .first-child {
+.projects__cards-container > .first-child {
   transform: rotateZ(-1deg) !important;
   z-index: 1000 !important;
 }
-.projects__cards-container :nth-child(2) {
+.projects__cards-container > :nth-child(2) {
   transform: translate(-60px) rotateZ(-7deg) !important;
   z-index: 950 !important;
 }
-.projects__cards-container :last-child {
+.projects__cards-container > :last-child {
   transform: translate(-30px) rotateZ(-4deg) !important;
   z-index: 900 !important;
 }
