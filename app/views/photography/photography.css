@@ -1,0 +1,13 @@
+.photography-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  margin: 1rem 10% 1rem 10%;
+}
+
+.galery {
+  display: grid !important;
+  grid-template-columns: auto auto auto;
+  margin: auto;
+  gap: 16px;
+}

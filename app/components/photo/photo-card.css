@@ -1,15 +1,23 @@
 .photo-card {
-  width: 250px;
-  height: 230px;
+  width: 220px !important;
+  height: 230px !important;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.photo-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
 .photo-card__img {
+  width: 220px !important;
+  height: 230px !important;
   border-radius: 10px;
   object-fit: cover;
   transition: all 0.3s ease-in-out;

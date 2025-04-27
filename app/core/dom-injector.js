@@ -1,4 +1,4 @@
-domInjectorSingle = (componentUrl, componentDomDestination) => {
+domInjectorSingle = (componentUrl, domDestination) => {
   fetch(componentUrl)
     .then((response) => {
       if (!response.ok) {
@@ -7,7 +7,7 @@ domInjectorSingle = (componentUrl, componentDomDestination) => {
       return response.text();
     })
     .then((data) => {
-      document.getElementById(componentDomDestination).innerHTML = data;
+      document.getElementById(domDestination).innerHTML = data;
     })
     .catch((error) => {
       console.error(error);
@@ -18,7 +18,7 @@ domInjectorSingle = (componentUrl, componentDomDestination) => {
     });
 };
 
-const domInjector = (componentUrl, componentDomDestination, inputData) => {
+const domInjector = (componentUrl, domDestination, inputData) => {
   inputData.forEach((item) => {
     fetch(componentUrl)
       .then((response) => {
@@ -37,9 +37,9 @@ const domInjector = (componentUrl, componentDomDestination, inputData) => {
           });
 
           const _data = createDummyDiv(replacedData);
-          document.getElementById(componentDomDestination).appendChild(_data);
+          document.getElementById(domDestination).appendChild(_data);
         } else {
-          document.getElementById(componentDomDestination).appendChild(data);
+          document.getElementById(domDestination).appendChild(data);
         }
       })
       // Why not
@@ -64,7 +64,7 @@ const domInjector = (componentUrl, componentDomDestination, inputData) => {
       .catch((error) => {
         console.error(error);
         document.getElementById(
-          componentDomDestination
+          domDestination
         ).innerHTML = `<p>Error loading content. Please reload.</p>`;
       });
   });
