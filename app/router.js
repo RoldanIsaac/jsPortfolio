@@ -39,3 +39,9 @@ fetch("app/views/testimonials/testimonials.html")
   .then((data) => {
     document.getElementById("testimonials-container").innerHTML = data;
   });
+
+fetch("app/components/footer/footer.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("footer-container").innerHTML = data;
+  });
