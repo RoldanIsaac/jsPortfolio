@@ -16,10 +16,6 @@ const views = [
     destinationId: "projects-container",
   },
   {
-    url: "app/views/photography/photography.html",
-    destinationId: "photography-container",
-  },
-  {
     url: "app/views/skills/skills.html",
     destinationId: "skills-container",
   },
