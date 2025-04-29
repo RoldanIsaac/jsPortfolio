@@ -5,10 +5,6 @@ const views = [
     destinationId: "avatar-container",
   },
   {
-    url: "app/components/tabs/tabs.html",
-    destinationId: "tabs-container",
-  },
-  {
     url: "app/views/skills/skills.html",
     destinationId: "skills-container",
   },
@@ -19,10 +15,6 @@ const views = [
   {
     url: "app/views/testimonials/testimonials.html",
     destinationId: "testimonials-container",
-  },
-  {
-    url: "app/components/footer/footer.html",
-    destinationId: "footer-container",
   },
 ];
 
