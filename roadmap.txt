@@ -1,0 +1,71 @@
+preguntas props
+componmente anidado
+
+import { Component } from './component.js';
+
+const child = new Component({
+  selector: '#child-slot',
+  template: '<p>Soy el componente hijo</p>',
+  style: 'p { color: teal; font-weight: bold; }',
+  script: () => console.log('Hijo montado')
+});
+
+const parent = new Component({
+  selector: '#app',
+  template: `
+    <div>
+      <h2>Componente padre</h2>
+      <div id="child-slot"></div>
+    </div>
+  `,
+  style: `
+    h2 { color: purple; }
+    div { border: 2px solid #ccc; padding: 1rem; }
+  `,
+  script: () => {
+    // Una vez montado el padre, montamos el hijo
+    child.mount();
+  }
+});
+
+parent.mount();
+
+
+
+
+
+Escalable a rutas, props, lazy-loading, etc.
+
+
+
+import { registry } from './ComponentRegistry.js';
+
+async function bootstrapApp() {
+  for (const component of registry) {
+    await component.mount();
+  }
+}
+
+bootstrapApp();
+
+
+
+🧠 Ventajas del patrón ComponentManager:
+Te permite tener control fino sobre cuándo se montan.
+
+Preparado para routing, lazy loading, condiciones.
+
+Escalable a plugins, eventos globales o sistema de eventos por componente.
+
+
+🚀 Nivel aún más pro (si querés ir ahí)
+Un sistema de rutas (Router) que monte componentes según URL.
+
+Un event-bus interno o pub/sub para comunicar componentes.
+
+destroy() o dispose() para limpiar listeners o timers.
+
+Soporte para scoped styles o shadow DOM (si te interesa encapsulación real).
+
+
+¿Querés que prepare una versión que combine ComponentManager + routing tipo SPA ligera (como React Router, pero sin frameworks)?
