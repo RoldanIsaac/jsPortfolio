@@ -1,4 +1,4 @@
-class Component {
+export class Component {
   constructor({ selector, template, styles, script, props = {} }) {
     this.selector = selector;
     this.template = template;
@@ -45,7 +45,7 @@ class Component {
       const scriptTag = document.createElement("script");
       scriptTag.src = this.script;
       scriptTag.async = true;
-      // scriptTag.defer = true;
+      //   scriptTag.defer = true;
       document.body.appendChild(scriptTag);
     }
   }

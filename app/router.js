@@ -1,3 +1,4 @@
+import { domInjectorSingle } from "./core/dom-injector.js";
 const views = [
   {
     url: "app/views/avatar.html",
@@ -6,10 +7,6 @@ const views = [
   {
     url: "app/components/tabs/tabs.html",
     destinationId: "tabs-container",
-  },
-  {
-    url: "app/views/projects/projects.html",
-    destinationId: "projects-container",
   },
   {
     url: "app/views/skills/skills.html",

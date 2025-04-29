@@ -1,24 +1,38 @@
-const card = {
-  url: "app/components/project-card/project-card.html",
-  destinationId: "projects__cards-container",
-};
+import { Component } from "../../core/component.js";
+import { domInjector } from "../../core/dom-injector.js";
 
-const cardData = [
-  {
-    url: "public/screenshoots/sho-2.png",
-    title: "SHO Management System",
-    description: "Descripción de la Card 1",
-  },
-  {
-    url: "public/screenshoots/sho-3.png",
-    title: "Pro Dynamic Web",
-    description: "Descripción de la Card 3",
-  },
-  {
-    url: "public/screenshoots/sho.png",
-    title: "Google Services Integration",
-    description: "Descripción de la Card 2",
-  },
-];
+export class Projects extends Component {
+  constructor() {
+    super({
+      selector: "#projects-container",
+      template: "app/views/projects/projects.html",
+      styles: "app/views/projects/projects.css",
+      script: () => {
+        const card = {
+          url: "app/components/project-card/project-card.html",
+          destinationId: "projects__cards-container",
+        };
 
-domInjector(card.url, card.destinationId, cardData);
+        const cardData = [
+          {
+            url: "public/screenshoots/sho-2.png",
+            title: "SHO Management System",
+            description: "Descripción de la Card 1",
+          },
+          {
+            url: "public/screenshoots/sho-3.png",
+            title: "Pro Dynamic Web",
+            description: "Descripción de la Card 3",
+          },
+          {
+            url: "public/screenshoots/sho.png",
+            title: "Google Services Integration",
+            description: "Descripción de la Card 2",
+          },
+        ];
+
+        domInjector(card.url, card.destinationId, cardData);
+      },
+    });
+  }
+}
