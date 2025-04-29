@@ -9,10 +9,6 @@ const views = [
     destinationId: "skills-container",
   },
   {
-    url: "app/views/about-me/about-me.html",
-    destinationId: "about-me-container",
-  },
-  {
     url: "app/views/testimonials/testimonials.html",
     destinationId: "testimonials-container",
   },
