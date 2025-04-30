@@ -9,6 +9,7 @@ export class Router {
     // First Path will show '/'
     // So execute loadRoute here will be like navigate("/")
     document.addEventListener("DOMContentLoaded", () => this.loadRoute());
+    console.log(this.routes);
   }
 
   navigate(path) {
