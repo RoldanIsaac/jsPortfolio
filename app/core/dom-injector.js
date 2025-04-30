@@ -1,4 +1,4 @@
-domInjectorSingle = (componentUrl, domDestination) => {
+export const domInjectorSingle = (componentUrl, domDestination) => {
   fetch(componentUrl)
     .then((response) => {
       if (!response.ok) {
@@ -18,7 +18,7 @@ domInjectorSingle = (componentUrl, domDestination) => {
     });
 };
 
-const domInjector = (componentUrl, domDestination, inputData) => {
+export const domInjector = (componentUrl, domDestination, inputData) => {
   inputData.forEach((item) => {
     fetch(componentUrl)
       .then((response) => {
