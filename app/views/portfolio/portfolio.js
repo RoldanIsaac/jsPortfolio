@@ -24,7 +24,7 @@ export class Portfolio extends Component {
           selector: "photography-container",
         });
         manager.register("tabs", Tabs, { selector: "tabs-container" });
-        manager.register("about", About, { selector: "about-container" });
+        // manager.register("about", About, { selector: "about-container" });
         manager.register("footer", Footer, { selector: "footer-container" });
 
         manager.mountAll();
