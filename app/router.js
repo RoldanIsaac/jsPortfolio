@@ -1,16 +1,18 @@
 import { ComponentManager } from "./core/component-manager.js";
 import { Portfolio } from "./views/portfolio/portfolio.js";
-const manager = new ComponentManager();
 
+// Rutes definition
 const routes = {
-  "/home": () => loadPage("home"),
+  "/": () => loadPage("portfolio", "app"),
   "/photography": () => loadPage("photography"),
   "/developer": () => loadPage("developer"),
   "/about": () => loadPage("about"),
 };
 
-const loadPage = (page) => {
-  manager.register("portfolio", Portfolio, { selector: "app" });
+const manager = new ComponentManager();
+
+const loadPage = (componentName, selector) => {
+  manager.register(componentName, Portfolio, { selector });
   manager.mountAll();
 };
 
@@ -37,7 +39,7 @@ const navigate = (path) => {
 window.addEventListener("DOMContentLoaded", () => {
   //   const path = window.location.pathname;
   //   First Path will show '/'
-  navigate("/home");
+  navigate("/");
 });
 
 // import { domInjectorSingle } from "./core/dom-injector.js";

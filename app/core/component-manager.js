@@ -4,7 +4,10 @@ export class ComponentManager {
   }
 
   register(name, ComponentClass, options) {
+    // Create a new instance of the component
     const instance = new ComponentClass(options);
+
+    // Register the instance in the component list
     this.components.set(name, instance);
   }
 

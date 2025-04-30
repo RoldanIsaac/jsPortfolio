@@ -1,5 +1,7 @@
 import { Component } from "../../core/component.js";
 import { domInjector } from "../../core/dom-injector.js";
+import { ComponentManager } from "../../core/component-manager.js";
+import { ProjectCard } from "../../components/project-card/project-card.js";
 
 export class Projects extends Component {
   constructor() {
@@ -8,6 +10,14 @@ export class Projects extends Component {
       template: "app/views/projects/projects.html",
       styles: "app/views/projects/projects.css",
       script: () => {
+        // const manager = new ComponentManager();
+
+        // manager.register("projectCard", ProjectCard, {
+        //   selector: "projects__cards-container",
+        // });
+
+        // manager.mountAll();
+
         const card = {
           url: "app/components/project-card/project-card.html",
           destinationId: "projects__cards-container",
