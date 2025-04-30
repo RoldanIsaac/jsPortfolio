@@ -18,6 +18,7 @@ export class Router {
 
   loadRoute() {
     const path = window.location.pathname;
+    console.log(path);
     const route = this.routes[path];
     if (route) {
       this.routes[path]();
