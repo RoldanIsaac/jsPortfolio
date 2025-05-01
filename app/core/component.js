@@ -16,10 +16,25 @@ export class Component {
         throw new Error("Error loading template: " + res.statusText);
       }
       const html = await res.text();
-      this.root.innerHTML = html;
+
+      if (this.props) {
+        this.root.innerHTML = await this.renderProps(html, this.props);
+      } else {
+        this.root.innerHTML = html;
+      }
     } else {
       this.root.innerHTML = this.template;
     }
+  }
+
+  // Insert props if available
+  async renderProps(template, props) {
+    let renderedTemplate = template;
+    for (const key in props) {
+      const regex = new RegExp(`{{\\s*${key}\\s*}}`, "g");
+      renderedTemplate = renderedTemplate.replace(regex, props[key]);
+    }
+    return renderedTemplate;
   }
 
   // Insert styles in the head of the document

@@ -10,12 +10,6 @@
 ¿Quieres que te arme un pequeño boilerplate base con esta clase lista para usar?
 
 
-
-
-Ejemplo de uso real
-js
-Copy
-Edit
 const myComponent = new Component({
   selector: '#app',
   template: '<h1>Hola, {{name}}</h1>',
@@ -33,44 +27,8 @@ myComponent.mount();
 
 
 
-preguntas props
-componmente anidado
-
-import { Component } from './component.js';
-
-const child = new Component({
-  selector: '#child-slot',
-  template: '<p>Soy el componente hijo</p>',
-  style: 'p { color: teal; font-weight: bold; }',
-  script: () => console.log('Hijo montado')
-});
-
-const parent = new Component({
-  selector: '#app',
-  template: `
-    <div>
-      <h2>Componente padre</h2>
-      <div id="child-slot"></div>
-    </div>
-  `,
-  style: `
-    h2 { color: purple; }
-    div { border: 2px solid #ccc; padding: 1rem; }
-  `,
-  script: () => {
-    // Una vez montado el padre, montamos el hijo
-    child.mount();
-  }
-});
-
-parent.mount();
-
-
-
-
-
-Escalable a rutas, props, lazy-loading, etc.
-
+preguntas 
+  rutas, props, lazy-loading, nested components, etc.
 
 
 import { registry } from './ComponentRegistry.js';
