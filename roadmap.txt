@@ -1,168 +1,19 @@
 
 
-### 🧰 Extensiones que podrías implementar después:
-- Scoped styles (estilos con `data-id` o `:host`)
-- Observabilidad (eventos de montaje/desmontaje)
-- Props y slots
-- Carga de recursos con cache control
-- Sistema de rutas o gestión de estado
-
-¿Quieres que te arme un pequeño boilerplate base con esta clase lista para usar?
-
-
-
-
-Ejemplo de uso real
-js
-Copy
-Edit
-const myComponent = new Component({
-  selector: '#app',
-  template: '<h1>Hola, {{name}}</h1>',
-  style: 'h1 { color: red; }',
-  script: (el, props) => {
-    el.querySelector('h1').innerText = `Hola, ${props.name}`;
-  },
-  props: { name: 'Mundo' }
-});
-
-myComponent.mount();
 ¿Quieres que te lo prepare como módulo ES6 o compatible con node bundlers también?
 
 
-
-
-
-preguntas props
-componmente anidado
-
-import { Component } from './component.js';
-
-const child = new Component({
-  selector: '#child-slot',
-  template: '<p>Soy el componente hijo</p>',
-  style: 'p { color: teal; font-weight: bold; }',
-  script: () => console.log('Hijo montado')
-});
-
-const parent = new Component({
-  selector: '#app',
-  template: `
-    <div>
-      <h2>Componente padre</h2>
-      <div id="child-slot"></div>
-    </div>
-  `,
-  style: `
-    h2 { color: purple; }
-    div { border: 2px solid #ccc; padding: 1rem; }
-  `,
-  script: () => {
-    // Una vez montado el padre, montamos el hijo
-    child.mount();
-  }
-});
-
-parent.mount();
-
-
-
-
-
-Escalable a rutas, props, lazy-loading, etc.
-
-
-
-import { registry } from './ComponentRegistry.js';
-
-async function bootstrapApp() {
-  for (const component of registry) {
-    await component.mount();
-  }
-}
-
-bootstrapApp();
-
-
-
-🧠 Ventajas del patrón ComponentManager:
-Te permite tener control fino sobre cuándo se montan.
-
 Preparado para routing, lazy loading, condiciones.
 
-Escalable a plugins, eventos globales o sistema de eventos por componente.
-
-
 🚀 Nivel aún más pro (si querés ir ahí)
-Un sistema de rutas (Router) que monte componentes según URL.
-
 Un event-bus interno o pub/sub para comunicar componentes.
-
 destroy() o dispose() para limpiar listeners o timers.
-
 Soporte para scoped styles o shadow DOM (si te interesa encapsulación real).
 
 
 ¿Querés que prepare una versión que combine ComponentManager + routing tipo SPA ligera (como React Router, pero sin frameworks)?
 
 
-
-¡Qué interesante que estés trabajando en un microframework para gestionar HTML, CSS y JS dinámicos! Para implementar funcionalidades más avanzadas, como enrutamiento (routing), hay varias opciones que podrías considerar dependiendo de lo que quieras lograr y cuán completo deseas que sea tu framework. Te voy a hacer algunas recomendaciones:
-
-### 1. **Enrutamiento (Routing)**
-
-El enrutamiento en aplicaciones web es esencial para cambiar el contenido sin recargar la página. En el caso de un microframework que estás creando, te recomendaría dos enfoques:
-
-- **Usar el `History API` o `Hash API` de JavaScript**:
-  Si no deseas añadir demasiadas dependencias y prefieres un control total sobre el enrutamiento, puedes implementar tu propio sistema de enrutamiento con el `History API` o el `Hash API`. Esto te permite manejar las rutas de forma dinámica, sin recargar la página, y con URLs limpias.
-
-  Ejemplo básico usando el `History API`:
-
-  ```js
-  // Define las rutas
-  const routes = {
-    '/home': () => loadPage('home'),
-    '/about': () => loadPage('about'),
-    '/contact': () => loadPage('contact')
-  };
-
-  // Función que cambia el contenido de la página
-  function loadPage(page) {
-    document.getElementById('content').innerHTML = `Contenido de ${page}`;
-  }
-
-  // Escuchar cambios en la URL
-  window.addEventListener('popstate', (event) => {
-    const path = window.location.pathname;
-    if (routes[path]) {
-      routes[path]();
-    }
-  });
-
-  // Función para navegar a una ruta
-  function navigate(path) {
-    window.history.pushState({}, '', path);
-    if (routes[path]) {
-      routes[path]();
-    }
-  }
-
-  // Inicializar la página con la ruta actual
-  const currentPath = window.location.pathname;
-  if (routes[currentPath]) {
-    routes[currentPath]();
-  }
-  ```
-
-  **Ventajas**:
-  - Control total.
-  - No dependes de ninguna librería externa.
-
-  **Desventajas**:
-  - Tienes que manejar todo el enrutamiento tú mismo (por ejemplo, la gestión de rutas y la carga de contenido).
-
-- **Librerías de enrutamiento ligeras**:
-  Si prefieres no reinventar la rueda y no te importa agregar una pequeña dependencia, puedes usar algo como [Page.js](https://github.com/visionmedia/page.js), que es una librería ligera para enrutamiento. Es muy fácil de usar y puede integrarse bien en un microframework.
 
   Ejemplo con `Page.js`:
 

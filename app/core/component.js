@@ -1,9 +1,19 @@
+import { ComponentManager } from "./component-manager.js";
+
 export class Component {
-  constructor({ selector, template, styles, script, props = {} }) {
+  constructor({
+    selector,
+    template,
+    styles,
+    script,
+    imports = [],
+    props = {},
+  }) {
     this.selector = selector;
     this.template = template;
     this.styles = styles;
     this.script = script;
+    this.imports = imports; // { name, componentClass, selector, props }
     this.props = props;
     this.root = document.querySelector(this.selector);
   }
@@ -16,10 +26,25 @@ export class Component {
         throw new Error("Error loading template: " + res.statusText);
       }
       const html = await res.text();
-      this.root.innerHTML = html;
+
+      if (this.props) {
+        this.root.innerHTML = await this.renderProps(html, this.props);
+      } else {
+        this.root.innerHTML = html;
+      }
     } else {
       this.root.innerHTML = this.template;
     }
+  }
+
+  // Insert props if available
+  async renderProps(template, props) {
+    let renderedTemplate = template;
+    for (const key in props) {
+      const regex = new RegExp(`{{\\s*${key}\\s*}}`, "g");
+      renderedTemplate = renderedTemplate.replace(regex, props[key]);
+    }
+    return renderedTemplate;
   }
 
   // Insert styles in the head of the document
@@ -58,10 +83,28 @@ export class Component {
     return this.props;
   }
 
+  async loadImports() {
+    if (this.imports && this.imports.length > 0) {
+      const manager = new ComponentManager();
+      this.imports.forEach(({ name, componentClass, selector, props }) => {
+        manager.register(name, componentClass, {
+          selector,
+          props,
+        });
+      });
+      manager.mountAll();
+    }
+  }
+
   async mount() {
     await this.loadTemplate();
     await this.loadStyles();
     await this.loadScript();
+    await this.afterMount();
+  }
+
+  async afterMount() {
+    await this.loadImports();
   }
 
   unmount() {

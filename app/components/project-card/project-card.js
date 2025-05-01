@@ -1,12 +1,13 @@
 import { Component } from "./../../core/component.js";
 
 export class ProjectCard extends Component {
-  constructor({ selector }) {
+  constructor({ selector, props }) {
     super({
-      selector: selector,
+      selector,
       template: "app/components/project-card/project-card.html",
       styles: "app/components/project-card/project-card.css",
-      scripts: () => {},
+      script: () => {},
+      props,
     });
   }
 }
