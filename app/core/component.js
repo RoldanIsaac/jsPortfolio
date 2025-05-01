@@ -1,9 +1,19 @@
+import { ComponentManager } from "./component-manager.js";
+
 export class Component {
-  constructor({ selector, template, styles, script, props = {} }) {
+  constructor({
+    selector,
+    template,
+    styles,
+    script,
+    imports = [],
+    props = {},
+  }) {
     this.selector = selector;
     this.template = template;
     this.styles = styles;
     this.script = script;
+    this.imports = imports;
     this.props = props;
     this.root = document.querySelector(this.selector);
   }
@@ -73,10 +83,28 @@ export class Component {
     return this.props;
   }
 
+  async loadImports() {
+    if (this.imports && this.imports.length > 0) {
+      const manager = new ComponentManager();
+      this.imports.forEach(({ name, componentClass, selector, props }) => {
+        manager.register(name, componentClass, {
+          selector,
+          props,
+        });
+      });
+      manager.mountAll();
+    }
+  }
+
   async mount() {
     await this.loadTemplate();
     await this.loadStyles();
     await this.loadScript();
+    await this.afterMount();
+  }
+
+  async afterMount() {
+    await this.loadImports();
   }
 
   unmount() {

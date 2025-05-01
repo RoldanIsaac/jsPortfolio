@@ -10,43 +10,30 @@ export class Projects extends Component {
       template: "app/views/projects/projects.html",
       styles: "app/views/projects/projects.css",
       script: () => {
-        const manager = new ComponentManager();
+        const card = {
+          url: "app/components/project-card/project-card.html",
+          destinationId: "projects__cards-container",
+        };
 
-        manager.register("projectCard", ProjectCard, {
-          selector: "#projects__cards-container",
-          props: {
+        const cardData = [
+          {
             url: "public/screenshoots/sho-2.png",
             title: "SHO Management System",
             description: "Descripción de la Card 1",
           },
-        });
+          {
+            url: "public/screenshoots/sho-3.png",
+            title: "Pro Dynamic Web",
+            description: "Descripción de la Card 3",
+          },
+          {
+            url: "public/screenshoots/sho.png",
+            title: "Google Services Integration",
+            description: "Descripción de la Card 2",
+          },
+        ];
 
-        manager.mountAll();
-
-        // const card = {
-        //   url: "app/components/project-card/project-card.html",
-        //   destinationId: "projects__cards-container",
-        // };
-
-        // const cardData = [
-        //   {
-        //     url: "public/screenshoots/sho-2.png",
-        //     title: "SHO Management System",
-        //     description: "Descripción de la Card 1",
-        //   },
-        //   {
-        //     url: "public/screenshoots/sho-3.png",
-        //     title: "Pro Dynamic Web",
-        //     description: "Descripción de la Card 3",
-        //   },
-        //   {
-        //     url: "public/screenshoots/sho.png",
-        //     title: "Google Services Integration",
-        //     description: "Descripción de la Card 2",
-        //   },
-        // ];
-
-        // domInjector(card.url, card.destinationId, cardData);
+        domInjector(card.url, card.destinationId, cardData);
       },
     });
   }
