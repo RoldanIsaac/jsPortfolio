@@ -2,9 +2,9 @@ import { Component } from "../../core/component.js";
 import { domInjector } from "../../core/dom-injector.js";
 
 export class Photography extends Component {
-  constructor() {
+  constructor({ selector }) {
     super({
-      selector: "#photography-container",
+      selector: selector,
       template: "app/views/photography/photography.html",
       styles: "app/views/photography/photography.css",
       script: () => {

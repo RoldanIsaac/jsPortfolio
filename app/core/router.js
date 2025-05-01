@@ -9,7 +9,7 @@ export class Router {
     // First Path will show '/'
     // So execute loadRoute here will be like navigate("/")
     document.addEventListener("DOMContentLoaded", () => this.loadRoute());
-    this.preventDefaultATagRedirection();
+    this.preventDefaultLinkTagRedirection();
   }
 
   navigate(path) {
@@ -31,14 +31,18 @@ export class Router {
   // ---------------------------------------------------------------------------------------
   // @ Helpful resources
   // ---------------------------------------------------------------------------------------
-  preventDefaultATagRedirection() {
+  preventDefaultLinkTagRedirection() {
     // Capture clicks on a tags and prevent page reload
     document.addEventListener("click", (e) => {
       const target = e.target.closest("a");
 
       if (target && target.href.startsWith(window.location.origin)) {
         e.preventDefault();
+
+        // Get the href path
         const path = target.getAttribute("href");
+
+        // Navigate to link
         this.navigate(path);
       }
     });

@@ -1,9 +1,9 @@
 import { Component } from "../../core/component.js";
 
 export class Tabs extends Component {
-  constructor() {
+  constructor({ selector }) {
     super({
-      selector: "#tabs-container",
+      selector: selector,
       template: "app/components/tabs/tabs.html",
       styles: "app/components/tabs/tabs.css",
       script: () => {
