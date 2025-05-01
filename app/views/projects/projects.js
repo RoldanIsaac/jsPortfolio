@@ -1,7 +1,5 @@
 import { Component } from "../../core/component.js";
 import { domInjector } from "../../core/dom-injector.js";
-import { ComponentManager } from "../../core/component-manager.js";
-import { ProjectCard } from "../../components/project-card/project-card.js";
 
 export class Projects extends Component {
   constructor({ selector }) {
