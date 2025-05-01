@@ -1,9 +1,9 @@
 import { Component } from "../../core/component.js";
 
 export class NavBar extends Component {
-  constructor() {
+  constructor({ selector }) {
     super({
-      selector: "#navbar-container",
+      selector: selector,
       template: "app/components/navbar/navbar.html",
       styles: "app/components/navbar/navbar.css",
       script: () => {

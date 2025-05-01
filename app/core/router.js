@@ -9,7 +9,7 @@ export class Router {
     // First Path will show '/'
     // So execute loadRoute here will be like navigate("/")
     document.addEventListener("DOMContentLoaded", () => this.loadRoute());
-    console.log(this.routes);
+    this.preventDefaultLinkTagRedirection();
   }
 
   navigate(path) {
@@ -19,13 +19,32 @@ export class Router {
 
   loadRoute() {
     const path = window.location.pathname;
-    console.log(path);
     const route = this.routes[path];
     if (route) {
-      this.routes[path]();
+      route();
     } else {
       console.error(`No route found for ${path}`);
       document.getElementById("app").innerHTML = "<h1>404 - Not Found</h1>";
     }
+  }
+
+  // ---------------------------------------------------------------------------------------
+  // @ Helpful resources
+  // ---------------------------------------------------------------------------------------
+  preventDefaultLinkTagRedirection() {
+    // Capture clicks on a tags and prevent page reload
+    document.addEventListener("click", (e) => {
+      const target = e.target.closest("a");
+
+      if (target && target.href.startsWith(window.location.origin)) {
+        e.preventDefault();
+
+        // Get the href path
+        const path = target.getAttribute("href");
+
+        // Navigate to link
+        this.navigate(path);
+      }
+    });
   }
 }

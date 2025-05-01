@@ -1,10 +1,9 @@
 import { Component } from "./../../core/component.js";
 
 export class ProjectCard extends Component {
-  constructor() {
+  constructor({ selector }) {
     super({
-      // selector: "projects__cards-container",
-      selector: "null",
+      selector: selector,
       template: "app/components/project-card/project-card.html",
       styles: "app/components/project-card/project-card.css",
       scripts: () => {},
