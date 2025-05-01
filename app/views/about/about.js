@@ -19,6 +19,9 @@ export class About extends Component {
           },
         },
       ],
+      props: {
+        name: "Orlando",
+      },
     });
   }
 }

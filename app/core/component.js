@@ -13,7 +13,7 @@ export class Component {
     this.template = template;
     this.styles = styles;
     this.script = script;
-    this.imports = imports;
+    this.imports = imports; // { name, componentClass, selector, props }
     this.props = props;
     this.root = document.querySelector(this.selector);
   }
