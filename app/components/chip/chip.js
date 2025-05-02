@@ -7,11 +7,12 @@ export class Chip extends Component {
       template: "app/components/chip/chip.html",
       styles: "app/components/chip/chip.css",
       script: (el) => {
-        // console.log(el);
         const span = el.querySelector("span");
-        span.addEventListener("click", () => {
-          console.log("Nothing happens");
-        });
+
+        const setChipStyles = (() => {
+          span.style.color = props.color;
+          span.style.backgroundColor = props.bg;
+        })();
       },
       props,
     });
