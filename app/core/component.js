@@ -65,7 +65,8 @@ export class Component {
   // Execute function or append to document as a script
   async loadScript() {
     if (typeof this.script === "function") {
-      this.script();
+      // Pass a DOM´s component reference to the class
+      this.script(this.root);
     } else if (this.script && this.script.endsWith(".js")) {
       const scriptTag = document.createElement("script");
       scriptTag.src = this.script;

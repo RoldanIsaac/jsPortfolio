@@ -6,6 +6,7 @@ import { Projects } from "../../views/projects/projects.js";
 import { About } from "../../views/about/about.js";
 import { Footer } from "../../components/footer/footer.js";
 import { Tabs } from "../../components/tabs/tabs.js";
+import { CurrentProject } from "../../sections/current-project/current-project.js";
 
 export class Portfolio extends Component {
   constructor({ selector }) {
@@ -17,6 +18,9 @@ export class Portfolio extends Component {
         const manager = new ComponentManager();
 
         manager.register("navbar", NavBar, { selector: "#navbar-container" });
+        manager.register("current", CurrentProject, {
+          selector: "#current-project-container",
+        });
         manager.register("projects", Projects, {
           selector: "#projects-container",
         });

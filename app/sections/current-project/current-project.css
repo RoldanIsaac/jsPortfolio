@@ -1,0 +1,7 @@
+.current-project-container {
+  padding: 3rem;
+  margin: auto;
+  margin-top: 3rem;
+  min-height: 50vh;
+  background-color: hsl(90, 4%, 9%);
+}
