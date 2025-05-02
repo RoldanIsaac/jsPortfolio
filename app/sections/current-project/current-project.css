@@ -10,4 +10,57 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
+  transition: all ease-in-out;
+}
+
+.chip-container > :first-child {
+  animation: fade 2s infinite;
+}
+.chip-container > :nth-child(2) {
+  animation: fade 2s infinite 0.4s;
+}
+.chip-container > :nth-child(3) {
+  animation: fade 2s infinite 0.8s;
+}
+.chip-container > :nth-child(4) {
+  animation: fade 2s infinite 1.2s;
+}
+.chip-container > :nth-child(5) {
+  animation: fade 2s infinite 1.6s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -34,7 +34,7 @@ export class CurrentProject extends Component {
           componentClass: Chip,
           selector: "#chip-3",
           props: {
-            label: "Google Api Services",
+            label: "NestJs",
             bg: "hsl(100, 50%, 30%)",
             color: "hsl(100, 50%, 90%)",
           },
