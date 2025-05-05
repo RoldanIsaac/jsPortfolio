@@ -1,3 +1,87 @@
+/* ---------------------------------------------------------------------------------------------
+	 Typografy | Font Sizes
+---------------------------------------------------------------------------------------------*/
+
+/* 
+	Escala tipográfica coherente, accesible y adaptable.
+	Sugerencia basada en una escala modular (por ejemplo, 1.25 o 1.333) 
+	Permite jerarquía visual sin romper consistencia, junto con la lógica detrás de cada tamaño. 
+*/
+/* 
+	🎯 Objetivos
+	Escalabilidad: útil para responsividad y temas claros/oscuro.
+	Jerarquía: fácil distinguir títulos, subtítulos, cuerpo, notas.
+	Accesibilidad: tamaños mínimos legibles.
+*/
+
+/* 📐 Variables sugeridas (rem para accesibilidad): */
+:root {
+  /* Escala base  | 8 font sizes */
+  --font-size-xs: 0.75rem; /* 12px – etiquetas pequeñas, ayuda contextual */
+  --font-size-sm: 0.875rem; /* 14px – subtítulos, metadatos */
+  --font-size-base: 1rem; /* 16px – texto normal, cuerpo principal */
+  --font-size-md: 1.125rem; /* 18px – cuerpo destacado, subtítulos importantes */
+
+  --font-size-lg: 1.25rem; /* 20px – títulos de secciones */
+  --font-size-xl: 1.5rem; /* 24px – encabezados secundarios */
+  --font-size-2xl: 2rem; /* 32px – encabezados principales */
+  --font-size-3xl: 3rem; /* 48px – branding, portadas, hero text */
+
+  /* Por rol semántico */
+  --font-caption: var(--font-size-xs);
+  --font-small-text: var(--font-size-sm);
+  --font-body: var(--font-size-base);
+
+  --font-subtitle: var(--font-size-md);
+  --font-title: var(--font-size-lg);
+
+  --font-subheading: var(--font-size-xl);
+  --font-heading: var(--font-size-2xl);
+
+  --font-hero: var(--font-size-3xl);
+}
+
+/*
+	📊 ¿Por qué estos tamaños?
+	16px (--text-base) es el mínimo legible recomendado por accesibilidad web.
+	Escala modular (≈1.25x): cada paso en la jerarquía es visualmente distinguible pero armónico.
+	Responsividad: puedes adaptar fácilmente usando media queries con estas variables.
+	Reusabilidad: puedes aplicarlas a botones, inputs, títulos, párrafos, etc., con clases como .text-sm, .text-xl. 
+*/
+
+/* Clases utilitarias */
+.text-caption {
+  font-size: var(--font-caption);
+}
+.text-sm {
+  font-size: var(--font-small-text);
+}
+.text-body {
+  font-size: var(--font-body);
+}
+.text-subtitle {
+  font-size: var(--font-subtitle);
+}
+.text-title {
+  font-size: var(--font-title);
+}
+.text-subheading {
+  font-size: var(--font-subheading);
+  font-weight: 600;
+}
+.text-heading {
+  font-size: var(--font-heading);
+  font-weight: bold;
+}
+.text-hero {
+  font-size: var(--font-hero);
+  font-weight: 800;
+}
+
+/* ---------------------------------------------------------------------------------------------
+	 Typografy END
+---------------------------------------------------------------------------------------------*/
+
 body {
   font-family: Arial, sans-serif;
   text-align: center;
