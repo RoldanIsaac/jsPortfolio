@@ -7,6 +7,7 @@ import { About } from "../../views/about/about.js";
 import { Footer } from "../../components/footer/footer.js";
 import { Tabs } from "../../components/tabs/tabs.js";
 import { CurrentProject } from "../../sections/current-project/current-project.js";
+import { Banner } from "../../components/banner/banner.js";
 
 export class Portfolio extends Component {
   constructor({ selector }) {
@@ -23,6 +24,9 @@ export class Portfolio extends Component {
         });
         manager.register("projects", Projects, {
           selector: "#projects-container",
+        });
+        manager.register("banner", Banner, {
+          selector: "#banner-container",
         });
         manager.register("photography", Photography, {
           selector: "#photography-container",
