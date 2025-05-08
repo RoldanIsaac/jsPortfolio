@@ -9,8 +9,18 @@ export class ModeToggle extends Component {
       script: (el) => {
         const button = el.querySelector("button");
 
+        const weatherIcon = el.querySelector("#wheather_svg");
+
         button.addEventListener("click", () => {
-          document.style.backgroundColor = "black";
+          const currentTheme = document.body.getAttribute("data-theme");
+
+          if (currentTheme === "dark") {
+            document.body.setAttribute("data-theme", "light");
+            weatherIcon.src = "public/icons/sun.svg";
+          } else {
+            document.body.setAttribute("data-theme", "dark");
+            weatherIcon.src = "public/icons/moon.svg";
+          }
         });
       },
       props,

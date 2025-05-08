@@ -1,4 +1,13 @@
 /* ---------------------------------------------------------------------------------------------
+	 Typography | Font
+---------------------------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: portfolio-geist;
+  src: url(../../public/fonts/Geist/Geist-VariableFont_wght.ttf);
+}
+
+/* ---------------------------------------------------------------------------------------------
 	 Typografy | Font Sizes
 ---------------------------------------------------------------------------------------------*/
 
@@ -14,7 +23,7 @@
 	Accesibilidad: tamaños mínimos legibles.
 */
 
-/* 📐 Variables sugeridas (rem para accesibilidad): */
+/* 📐 Suggested variables (rem para accesibilidad): */
 :root {
   /* Escala base  | 8 font sizes */
   --font-size-xs: 0.75rem; /* 12px – etiquetas pequeñas, ayuda contextual */
@@ -82,11 +91,110 @@
 	 Typografy END
 ---------------------------------------------------------------------------------------------*/
 
+/* ---------------------------------------------------------------------------------------------
+	 Colors | 
+---------------------------------------------------------------------------------------------*/
+
+:root {
+  --text: #111315;
+  --background: #f5f5fa;
+  --primary-light: #8fbfff;
+  --primary: #2a86ff;
+  --primary-dark: #0054c2;
+  --secondary: #30353c;
+  --accent: #f71af0;
+
+  --portfolio-white: #ffffff;
+
+  --text-gradient: linear-gradient(180deg, #666666, #000000);
+}
+
+[data-theme="dark"] {
+  --text: #f5f5fa;
+  --background: #111315;
+  --primary: #2a86ff;
+  --secondary: #30353c;
+  --accent: #f71af0;
+
+  --portfolio-white: #ffffff;
+
+  --text-gradient: linear-gradient(180deg, #ffffff, #adadad);
+}
+
+/* ---------------------------------------------------------------------------------------------
+	 Colors END 
+---------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------
+	 Utils classes
+---------------------------------------------------------------------------------------------*/
+
+.portfolio__hero {
+  font-family: portfolio-geist;
+
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  font-size: var(--font-hero);
+  line-height: 1;
+
+  /* Gradient Background in text */
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio__heading {
+  font-family: portfolio-geist;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  font-size: var(--font-heading);
+  line-height: 1;
+
+  /* Gradient Background in text */
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[class*="portfolio__button"] {
+  --heigth: 48px;
+  height: var(--heigth) !important;
+  border-radius: 8px;
+  min-width: calc((var(--heigth) * 2.4));
+  border: none;
+  cursor: pointer;
+}
+
+[class*="portfolio__button--sm"] {
+  height: 36px !important;
+}
+
+.portfolio__button\:primary {
+  background-color: var(--primary);
+  color: var(--portfolio-white);
+}
+
+.portfolio__button\:primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-primary {
+}
+.btn-primary:hover {
+  background-color: calc(var(--primary) + 20%);
+}
+
+/* ---------------------------------------------------------------------------------------------
+	 Utils classes | END
+---------------------------------------------------------------------------------------------*/
+
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
+  color: var(--text);
+  background-color: var(--background);
 }
 
 .app-container {
@@ -98,7 +206,7 @@ body {
 h1,
 h2,
 h3 {
-  color: #333;
+  color: #575252;
 }
 p {
   color: #666;

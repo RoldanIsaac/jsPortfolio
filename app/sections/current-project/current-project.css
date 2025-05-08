@@ -3,7 +3,7 @@
   margin: auto;
   margin-top: 3rem;
   min-height: 65vh;
-  background-color: hsl(90, 4%, 9%);
+  background-color: var(--background);
 }
 
 .chip-container {
@@ -32,6 +32,7 @@
 @keyframes fade {
   0% {
     opacity: 1;
+    box-shadow: 0 1px 4px -2px white;
   }
   10% {
     opacity: 0.9;
@@ -62,5 +63,6 @@
   }
   100% {
     opacity: 1;
+    box-shadow: 0 1px 4px -2px white;
   }
 }
