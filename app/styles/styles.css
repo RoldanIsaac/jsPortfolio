@@ -98,11 +98,11 @@
 :root {
   --text: #111315;
   --background: #f5f5fa;
-  --primary-light: #8fbfff;
-  --primary: #2a86ff;
-  --primary-dark: #0054c2;
-  --secondary: #30353c;
-  --accent: #f71af0;
+  --primary-light: hsl(33, 92%, 72%);
+  --primary: hsl(33, 92%, 52%);
+  --primary-dark: hsl(33, 91%, 32%);
+  --secondary: hsl(215, 11%, 21%);
+  --accent: hsl(302, 70%, 46%);
 
   --portfolio-white: #ffffff;
 
@@ -112,7 +112,9 @@
 [data-theme="dark"] {
   --text: #f5f5fa;
   --background: #111315;
-  --primary: #2a86ff;
+  --primary-light: hsl(214, 100%, 78%);
+  --primary: hsl(214, 100%, 58%);
+  --primary-dark: hsl(214, 100%, 38%);
   --secondary: #30353c;
   --accent: #f71af0;
 
@@ -168,12 +170,16 @@
 /* ----- Buttons ------*/
 
 [class*="portfolio__button"] {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  font-family: portfolio-geist;
   --heigth: 48px;
   height: var(--heigth) !important;
   border-radius: 8px;
-  min-width: calc((var(--heigth) * 2.4));
+  min-width: calc((var(--heigth) * 2.5));
   border: none;
   cursor: pointer;
+  transition: all ease-in-out 200ms;
 }
 
 [class*="portfolio__button--sm"] {
