@@ -1,5 +1,7 @@
 import { Component } from "../../core/component.js";
 import { VercelCard } from "../../components/vercel-card/vercel-card.js";
+import { chips } from "../main/main.js";
+import { VercelCardTwo } from "../../components/vercel-card-two/vercel-card-two.js";
 
 export class Projects extends Component {
   constructor({ selector }) {
@@ -19,9 +21,15 @@ export const vercelCards = [
     componentClass: VercelCard,
     selector: "#vercel-card-1",
     props: {
-      label: "Google Api Services",
-      bg: "hsl(20, 87.10%, 54.50%)",
-      color: "hsl(20, 51.70%, 94.30%)",
+      title: "Leaf",
+      description:
+        "A growing micro-framework built with the concept of reusable components in mind.",
+      chipNumber1: "75%",
+      chipWord1: "faster",
+      chipConcept1: "Integration time",
+      chipNumber2: "10%",
+      chipWord2: "accessible",
+      chipConcept2: "User friendly",
     },
   },
   {
@@ -29,39 +37,32 @@ export const vercelCards = [
     componentClass: VercelCard,
     selector: "#vercel-card-2",
     props: {
-      label: "SaaS",
-      bg: "hsl(50, 72.40%, 57.50%)",
-      color: "hsl(50, 50%, 90%)",
+      title: "JsCalendar",
+      description: "A Js Calendar for free use.",
+      chipNumber1: "75%",
+      chipWord1: "faster",
+      chipConcept1: "Integration time",
+      chipNumber2: "10%",
+      chipWord2: "accessible",
+      chipConcept2: "User friendly",
     },
   },
   {
-    name: "vercelCard3",
-    componentClass: VercelCard,
-    selector: "#vercel-card-3",
+    name: "vercelCardTwo1",
+    componentClass: VercelCardTwo,
+    selector: "#vercel-card-two-1",
     props: {
-      label: "NestJs",
-      bg: "hsl(100, 60.20%, 50.80%)",
-      color: "hsl(100, 50%, 90%)",
+      title: "JsCalendar",
+      description: "A Js Calendar for free use.",
     },
   },
   {
-    name: "vercelCard4",
-    componentClass: VercelCard,
-    selector: "#vercel-card-4",
+    name: "vercelCardTwo2",
+    componentClass: VercelCardTwo,
+    selector: "#vercel-card-two-2",
     props: {
-      label: "React",
-      bg: "hsl(150, 52.40%, 32.90%)",
-      color: "hsl(150, 50%, 90%)",
-    },
-  },
-  {
-    name: "vercelCard5",
-    componentClass: VercelCard,
-    selector: "#vercel-card-5",
-    props: {
-      label: "PandaCSS",
-      bg: "hsl(201, 65.00%, 20.20%)",
-      color: "hsl(200, 50%, 90%)",
+      title: "JsCalendar",
+      description: "A Js Calendar for free use.",
     },
   },
 ];

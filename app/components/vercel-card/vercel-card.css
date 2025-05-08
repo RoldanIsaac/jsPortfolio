@@ -1,12 +1,13 @@
 .vercel-card {
-  width: 290px;
-  height: 180px;
+  text-decoration: none;
+  width: 378px;
+  height: 316px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--secondary);
+  position: relative;
 }
 .vercel-card__img {
   border-radius: 10px;
@@ -15,12 +16,93 @@
   overflow: hidden;
   padding: 2px;
 }
+
 .vercel-card__content {
-  height: 30% !important;
-  padding: 16px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
   height: 100%;
-  background-color: var(background-color);
+  gap: 0.5rem;
+  background-color: var(--background);
+  transform: translateY(80px); /* Comment to debug */
+  transition: 225ms all ease-in-out;
+}
+
+.vercel-card__title {
+  font-size: var(--font-subheading);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+.vercel-card__description {
+  font-size: var(--font-text);
+  font-weight: 700;
+  color: var(--secondary);
+  line-height: 1.1;
+}
+.vercel-card__chip-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  opacity: 0; /* Comment to debug */
+  transition: 100ms all ease-in-out;
+}
+.vercel-card__chip {
+  padding: 0.2rem 0.6rem;
+  border: solid 1px var(--secondary);
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--secondary);
+}
+
+.vercel-card__chip-status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.vercel-card__chip-concept {
+  margin: 0;
+  font-size: var(--caption);
+}
+
+.vercel-card:hover > .vercel-card__content > .vercel-card__chip-container {
+  opacity: 1;
+}
+.vercel-card:hover > .vercel-card__content {
+  transform: translateY(-80px);
+}
+
+.vercel-card__decoration {
+  inset: 0 0 0 0;
+  position: absolute;
+  background: linear-gradient(
+        135deg,
+        #0000 20.5%,
+        var(--secondary) 0 29.5%,
+        #0000 0
+      )
+      0 16px,
+    linear-gradient(45deg, #0000 8%, var(--secondary) 0 17%, #0000 0 58%) 32px 0,
+    linear-gradient(
+      135deg,
+      #0000 8%,
+      var(--secondary) 0 17%,
+      #0000 0 58%,
+      var(--secondary) 0 67%,
+      #0000 0
+    ),
+    linear-gradient(
+      45deg,
+      #0000 8%,
+      var(--secondary) 0 17%,
+      #0000 0 58%,
+      var(--secondary) 0 67%,
+      #0000 0 83%,
+      var(--secondary) 0 92%,
+      #0000 0
+    ),
+    var(--accent);
+  background-size: 64px 64px;
 }

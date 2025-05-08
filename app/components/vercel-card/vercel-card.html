@@ -1,9 +1,25 @@
-<div class="vercel-card">
-  <img src="{{ url }}" alt="" class="vercel-card__img" />
+<a class="vercel-card" href="#">
+  <span class="vercel-card__decoration"></span>
   <div class="vercel-card__content">
-    <div>
-      <p>{{ title }}</p>
+    <p class="vercel-card__title">{{ title }}</p>
+    <span class="vercel-card__description">{{ description }}</span>
+    <div class="vercel-card__chip-container">
+      <!-- Chip -->
+      <div class="vercel-card__chip">
+        <div class="flex:row">
+          <p class="vercel-card__chip-number">{{ chipNumber1 }}</p>
+          <p class="vercel-card__chip-word">{{ chipWord1 }}</p>
+        </div>
+        <p class="vercel-card__chip-concept">{{ chipConcept1 }}</p>
+      </div>
+      <!-- Chip -->
+      <div class="vercel-card__chip">
+        <div class="vercel-card__chip-status">
+          <p class="vercel-card__chip-number">{{ chipNumber2 }}</p>
+          <p class="vercel-card__chip-word">{{ chipWord2 }}</p>
+        </div>
+        <p class="vercel-card__chip-concept">{{ chipConcept2 }}</p>
+      </div>
     </div>
-    <span>{{ description }}</span>
   </div>
-</div>
+</a>

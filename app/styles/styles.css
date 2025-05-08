@@ -37,7 +37,7 @@
   --font-size-3xl: 3rem; /* 48px – branding, portadas, hero text */
 
   /* Por rol semántico */
-  --font-caption: var(--font-size-xs);
+  --caption: var(--font-size-xs);
   --font-small-text: var(--font-size-sm);
   --font-body: var(--font-size-base);
 
@@ -60,7 +60,7 @@
 
 /* Clases utilitarias */
 .text-caption {
-  font-size: var(--font-caption);
+  font-size: var(--caption);
 }
 .text-sm {
   font-size: var(--font-small-text);
@@ -268,10 +268,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
   color: #575252;
-}
-p {
-  color: #666;
 }
