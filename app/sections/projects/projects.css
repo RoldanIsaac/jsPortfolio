@@ -18,7 +18,12 @@
 
 .projects__body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 15rem;
   margin-bottom: 5rem;
+}
+
+.vercel-cards__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }

@@ -98,10 +98,15 @@
 :root {
   --text: #111315;
   --background: #f5f5fa;
+
   --primary-light: hsl(33, 92%, 72%);
   --primary: hsl(33, 92%, 52%);
   --primary-dark: hsl(33, 91%, 32%);
-  --secondary: hsl(215, 11%, 91%);
+
+  --secondary: hsl(215, 11%, 71%);
+  --secondary-dark: hsl(215, 11%, 51%);
+  --secondary-light: hsl(215, 11%, 91%);
+
   --accent: hsl(165, 73%, 63%);
 
   --portfolio-white: #ffffff;
@@ -112,10 +117,15 @@
 [data-theme="dark"] {
   --text: #f5f5fa;
   --background: #111315;
+
   --primary-light: hsl(214, 100%, 78%);
   --primary: hsl(214, 100%, 58%);
   --primary-dark: hsl(214, 100%, 38%);
+
   --secondary: hsl(215, 11%, 21%);
+  --secondary-light: hsl(215, 11%, 41%);
+  --secondary-dark: hsl(215, 11%, 1%);
+
   --accent: hsl(302, 78%, 68%);
 
   --portfolio-white: #ffffff;
@@ -171,7 +181,7 @@
 
 [class*="portfolio__button"] {
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
   font-family: portfolio-geist;
   --heigth: 48px;
   height: var(--heigth) !important;
@@ -190,15 +200,15 @@
   background-color: var(--primary);
   color: var(--portfolio-white);
 }
-
 .portfolio__button\:primary:hover {
   background-color: var(--primary-dark);
 }
-
-.btn-primary {
+.portfolio__button\:secondary {
+  background-color: var(--secondary);
+  color: var(--portfolio-white);
 }
-.btn-primary:hover {
-  background-color: calc(var(--primary) + 20%);
+.portfolio__button\:secondary:hover {
+  background-color: var(--secondary-light);
 }
 
 .flex\:column {
