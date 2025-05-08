@@ -2,7 +2,7 @@ import { Router } from "./core/router.js";
 import { ComponentManager } from "./core/component-manager.js";
 import { Portfolio } from "./views/portfolio/portfolio.js";
 import { About } from "./views/about/about.js";
-import { Projects } from "./views/projects/projects.js";
+import { Projects } from "./sections/projects/projects.js";
 import { Photography } from "./views/photography/photography.js";
 
 const manager = new ComponentManager();
