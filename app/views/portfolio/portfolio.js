@@ -8,6 +8,7 @@ import { Footer } from "../../components/footer/footer.js";
 import { Tabs } from "../../components/tabs/tabs.js";
 import { CurrentProject } from "../../sections/current-project/current-project.js";
 import { Banner } from "../../components/banner/banner.js";
+import { Main } from "../../sections/main/main.js";
 
 export class Portfolio extends Component {
   constructor({ selector }) {
@@ -19,6 +20,9 @@ export class Portfolio extends Component {
         const manager = new ComponentManager();
 
         manager.register("navbar", NavBar, { selector: "#navbar-container" });
+        manager.register("main", Main, {
+          selector: "#main-container",
+        });
         manager.register("current", CurrentProject, {
           selector: "#current-project-container",
         });
