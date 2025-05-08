@@ -1,0 +1,91 @@
+.vercel-card-lg {
+  text-decoration: none;
+  width: 378px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid var(--secondary);
+  position: relative;
+  transition: 225ms all ease-in-out;
+}
+.vercel-card-lg__img {
+  border-radius: 10px;
+  /* object-fit: cover; */
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.vercel-card-lg__content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  gap: 0.5rem;
+  background-color: var(--background);
+  transition: 225ms all ease-in-out;
+}
+
+.vercel-card-lg__mock {
+}
+
+.vercel-card-lg__title {
+  font-size: var(--font-subheading);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+.vercel-card-lg__description {
+  font-size: var(--font-text);
+  font-weight: 700;
+  color: var(--secondary);
+  line-height: 1.1;
+}
+
+.vercel-card-lg__chip-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  opacity: 0; /* Comment to debug */
+  transition: 100ms all ease-in-out;
+}
+.vercel-card-lg__chip {
+  padding: 0.2rem 0.6rem;
+  border: solid 1px var(--secondary);
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--secondary);
+}
+
+.vercel-card-lg__chip-status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.vercel-card-lg__chip-concept {
+  margin: 0;
+  font-size: var(--caption);
+}
+
+/* Hover */
+.vercel-card-lg:hover
+  > .vercel-card-lg__content
+  > .vercel-card-lg__chip-container {
+  opacity: 1;
+}
+.vercel-card-lg:hover > .vercel-card-lg__content {
+  transform: translateY(-80px);
+}
+
+/* Hover */
+.vercel-card-lg:hover > .vercel-card-lg__content {
+  background-color: var(--secondary);
+}
+
+/* Decoration */
+.vercel-card-lg__decoration {
+}
