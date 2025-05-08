@@ -67,6 +67,7 @@
   font-size: var(--caption);
 }
 
+/* Hover */
 .vercel-card:hover > .vercel-card__content > .vercel-card__chip-container {
   opacity: 1;
 }
@@ -74,6 +75,7 @@
   transform: translateY(-80px);
 }
 
+/* Decoration */
 .vercel-card__decoration {
   inset: 0 0 0 0;
   position: absolute;

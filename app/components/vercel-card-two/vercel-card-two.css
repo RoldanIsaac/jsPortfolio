@@ -8,6 +8,7 @@
   border-radius: 8px;
   border: 1px solid var(--secondary);
   position: relative;
+  transition: 225ms all ease-in-out;
 }
 .vercel-card-two__img {
   border-radius: 10px;
@@ -44,6 +45,12 @@
   line-height: 1.1;
 }
 
+/* Hover */
+.vercel-card-two:hover > .vercel-card-two__content {
+  background-color: var(--secondary);
+}
+
+/* Decoration */
 .vercel-card-two__decoration {
   inset: 0 0 0 0;
   position: absolute;
