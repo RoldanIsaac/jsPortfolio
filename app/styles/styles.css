@@ -188,6 +188,10 @@ accent {
 
 /* ----- Buttons ------*/
 
+button {
+  border: none;
+}
+
 [class*="portfolio__button"] {
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -196,7 +200,6 @@ accent {
   height: var(--heigth) !important;
   border-radius: 8px;
   min-width: calc((var(--heigth) * 2.5));
-  border: none;
   cursor: pointer;
   transition: all ease-in-out 200ms;
 }

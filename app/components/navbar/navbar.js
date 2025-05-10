@@ -15,9 +15,8 @@ export class NavBar extends Component {
         },
       ],
       script: () => {
-        // Script para el menú hamburguesa
         const hamburger = document.getElementById("hamburger");
-        const navLinks = document.querySelector(".nav-links");
+        const navLinks = document.querySelector(".navbar__links-container");
 
         hamburger.addEventListener("click", () => {
           navLinks.classList.toggle("active");

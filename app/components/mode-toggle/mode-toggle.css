@@ -1,25 +1,31 @@
 :root {
-  --side: 21px;
+  --side: 1.2rem;
 }
 
 .mode-toggle__container {
-  background-color: var(--background);
-  width: calc(var(--side) + 0.8rem);
-  height: calc(var(--side) + 0.8rem);
-  border-radius: 100%;
   position: relative;
   border: transparent;
-}
-
-.mode-toggle-btn {
-  inset: 1px 1px 1px 1px;
   background-color: transparent;
-  background-color: var(--background);
-  position: absolute;
-  border-radius: 100%;
+  width: fit-content;
+  height: fit-content;
 }
 
-.mode-toggle-btn .weather-svg {
+.mode-toggle__btn {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10%;
+  background: var(--primary);
+  transition: all 50ms ease-in-out;
+}
+.mode-toggle__btn:hover {
+}
+.mode-toggle__btn:hover > .weather-svg {
+  transform: rotateZ(-105deg);
+}
+
+.mode-toggle__btn .weather-svg {
+  transition: 200ms all ease-in-out;
   height: var(--side);
   width: var(--side);
   color: var(--text);
