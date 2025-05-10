@@ -1,0 +1,6 @@
+.main__container {
+  margin: auto;
+  margin-top: 3rem;
+  min-height: 70vh;
+  background-color: var(--background);
+}

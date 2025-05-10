@@ -1,0 +1,9 @@
+.main-container {
+}
+
+.section-spacing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 7rem 11.6rem !important;
+}

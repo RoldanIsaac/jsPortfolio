@@ -1,0 +1,28 @@
+:root {
+  --hue: 100;
+  --saturation: 50%;
+  --lightness: 50%;
+
+  --color: hsl(100, 50%, 50%);
+  --bg: hsl(100, 50%, 70%);
+}
+
+.chip {
+  background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+  /*color: hsl(var(--hue), var(--saturation), var(--lightness)); */
+
+  white-space: nowrap;
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.chip::before {
+  content: attr(data-label);
+  color: attr(data-label color);
+}
+
+.chip:hover {
+  --lightness: 70%;
+}

@@ -1,0 +1,97 @@
+.vercel-card-two {
+  text-decoration: none;
+  width: 378px;
+  height: 316px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid var(--secondary);
+  position: relative;
+  transition: 225ms all ease-in-out;
+}
+.vercel-card-two__img {
+  border-radius: 10px;
+  /* object-fit: cover; */
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.vercel-card-two__content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  gap: 0.5rem;
+  background-color: var(--background);
+  transition: 225ms all ease-in-out;
+}
+
+.vercel-card-two__mock {
+}
+
+.vercel-card-two__title {
+  font-size: var(--font-subheading);
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1;
+}
+.vercel-card-two__description {
+  font-size: var(--font-text);
+  font-weight: 500;
+  color: var(--secondary);
+  line-height: 1.1;
+}
+
+/* Hover */
+.vercel-card-two:hover > .vercel-card-two__content {
+  background-color: var(--secondary);
+}
+
+/* Decoration */
+.vercel-card-two__decoration {
+  inset: 0 0 0 0;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(
+      45deg,
+      #0000 calc(25% / 3),
+      #01205e 0 calc(50% / 3),
+      #0000 0 calc(250% / 3),
+      #01205e 0 calc(275% / 3),
+      #0000 0
+    ),
+    linear-gradient(
+      45deg,
+      #01205e calc(25% / 3),
+      #0000 0 calc(50% / 3),
+      #01205e 0 25%,
+      #0000 0 75%,
+      #01205e 0 calc(250% / 3),
+      #0000 0 calc(275% / 3),
+      #01205e 0
+    ),
+    linear-gradient(
+      -45deg,
+      #0000 calc(25% / 3),
+      #01205e 0 calc(50% / 3),
+      #0000 0 calc(250% / 3),
+      #01205e 0 calc(275% / 3),
+      #0000 0
+    ),
+    linear-gradient(
+        -45deg,
+        #01205e calc(25% / 3),
+        #0000 0 calc(50% / 3),
+        #01205e 0 25%,
+        #0000 0 75%,
+        #01205e 0 calc(250% / 3),
+        #0000 0 calc(275% / 3),
+        #01205e 0
+      )
+      #2de7eb;
+  background-size: 64px 64px;
+  background-position: 0 0, 32px 32px;
+}

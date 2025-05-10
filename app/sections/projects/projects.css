@@ -1,0 +1,41 @@
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.projects__header {
+  /* font-size: 1.8rem; */
+  font-weight: bold;
+  margin: 2rem;
+  text-align: center;
+}
+
+.projects__body {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+
+.vercel-cards__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+}
+
+@media only screen and (min-width: 1092px) {
+  .vercel-cards__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 1292px) {
+  .vercel-cards__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}

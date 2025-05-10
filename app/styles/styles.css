@@ -1,0 +1,292 @@
+/* ---------------------------------------------------------------------------------------------
+	 Typography | Font
+---------------------------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: portfolio-geist;
+  src: url(../../public/fonts/Geist/Geist-VariableFont_wght.ttf);
+}
+
+/* ---------------------------------------------------------------------------------------------
+	 Typografy | Font Sizes
+---------------------------------------------------------------------------------------------*/
+
+/* 
+	Escala tipográfica coherente, accesible y adaptable.
+	Sugerencia basada en una escala modular (por ejemplo, 1.25 o 1.333) 
+	Permite jerarquía visual sin romper consistencia, junto con la lógica detrás de cada tamaño. 
+*/
+/* 
+	🎯 Objetivos
+	Escalabilidad: útil para responsividad y temas claros/oscuro.
+	Jerarquía: fácil distinguir títulos, subtítulos, cuerpo, notas.
+	Accesibilidad: tamaños mínimos legibles.
+*/
+
+/* 📐 Suggested variables (rem para accesibilidad): */
+:root {
+  /* Escala base  | 8 font sizes */
+  --font-size-xs: 0.75rem; /* 12px – etiquetas pequeñas, ayuda contextual */
+  --font-size-sm: 0.875rem; /* 14px – subtítulos, metadatos */
+  --font-size-base: 1rem; /* 16px – texto normal, cuerpo principal */
+  --font-size-md: 1.125rem; /* 18px – cuerpo destacado, subtítulos importantes */
+
+  --font-size-lg: 1.25rem; /* 20px – títulos de secciones */
+  --font-size-xl: 1.5rem; /* 24px – encabezados secundarios */
+  --font-size-2xl: 2rem; /* 32px – encabezados principales */
+  --font-size-3xl: 3rem; /* 48px – branding, portadas, hero text */
+
+  /* Por rol semántico */
+  --caption: var(--font-size-xs);
+  --font-small-text: var(--font-size-sm);
+  --font-body: var(--font-size-base);
+
+  --font-subtitle: var(--font-size-md);
+  --font-title: var(--font-size-lg);
+
+  --font-subheading: var(--font-size-xl);
+  --font-heading: var(--font-size-2xl);
+
+  --font-hero: var(--font-size-3xl);
+}
+
+/*
+	📊 ¿Por qué estos tamaños?
+	16px (--text-base) es el mínimo legible recomendado por accesibilidad web.
+	Escala modular (≈1.25x): cada paso en la jerarquía es visualmente distinguible pero armónico.
+	Responsividad: puedes adaptar fácilmente usando media queries con estas variables.
+	Reusabilidad: puedes aplicarlas a botones, inputs, títulos, párrafos, etc., con clases como .text-sm, .text-xl. 
+*/
+
+/* Clases utilitarias */
+.text-caption {
+  font-size: var(--caption);
+}
+.text-sm {
+  font-size: var(--font-small-text);
+}
+.text-body {
+  font-size: var(--font-body);
+}
+.text-subtitle {
+  font-size: var(--font-subtitle);
+}
+.text-title {
+  font-size: var(--font-title);
+}
+.text-subheading {
+  font-size: var(--font-subheading);
+  font-weight: 600;
+}
+.text-heading {
+  font-size: var(--font-heading);
+  font-weight: bold;
+}
+.text-hero {
+  font-size: var(--font-hero);
+  font-weight: 800;
+}
+
+/* ---------------------------------------------------------------------------------------------
+	 Typografy END
+---------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------
+	 Colors | 
+---------------------------------------------------------------------------------------------*/
+
+:root {
+  --text: #111315;
+  --background: #f5f5fa;
+
+  --primary-light: hsl(33, 92%, 72%);
+  --primary: hsl(33, 92%, 52%);
+  --primary-dark: hsl(33, 91%, 32%);
+
+  --secondary-lighter: hsl(215, 11%, 51%);
+  --secondary-light: hsl(215, 11%, 61%);
+  --secondary: hsl(215, 11%, 71%);
+  --secondary-dark: hsl(215, 11%, 81%);
+  --secondary-darker: hsl(215, 11%, 91%);
+
+  --accent: hsl(350, 73%, 63%);
+
+  --portfolio-white: #ffffff;
+
+  --text-gradient: linear-gradient(180deg, #666666, #000000);
+}
+
+[data-theme="dark"] {
+  --text: #f5f5fa;
+  --background: #090a0b;
+
+  --primary-lighter: hsl(214, 100%, 78%);
+  --primary-light: hsl(214, 100%, 68%);
+  --primary: hsl(214, 100%, 58%);
+  --primary-dark: hsl(214, 100%, 48%);
+  --primary-darker: hsl(214, 100%, 38%);
+
+  --secondary: hsl(215, 11%, 41%);
+  --secondary-light: hsl(215, 11%, 61%);
+  --secondary-dark: hsl(215, 11%, 31%);
+
+  --accent: hsl(221, 78%, 68%);
+
+  --portfolio-white: #ffffff;
+
+  --text-gradient: linear-gradient(180deg, #ffffff, #adadad);
+}
+
+accent {
+  color: var(--primary-light);
+}
+
+/* ---------------------------------------------------------------------------------------------
+	 Colors END 
+---------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------------
+	 Utils classes
+---------------------------------------------------------------------------------------------*/
+
+.portfolio__hero {
+  font-family: portfolio-geist;
+
+  font-weight: 200;
+  letter-spacing: -0.05em;
+  font-size: calc(var(--font-hero) + 1.2rem);
+  line-height: 1;
+
+  /* Gradient Background in text */
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio__heading {
+  font-family: portfolio-geist;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  font-size: var(--font-heading);
+  line-height: 1;
+
+  /* Gradient Background in text */
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio__caption {
+  font-family: portfolio-geist;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  padding-left: 0.5em;
+  line-height: 1;
+  font-size: var(--font-title);
+  color: var(--secondary-dark);
+}
+
+/* ----- Buttons ------*/
+
+[class*="portfolio__button"] {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-family: portfolio-geist;
+  --heigth: 48px;
+  height: var(--heigth) !important;
+  border-radius: 8px;
+  min-width: calc((var(--heigth) * 2.5));
+  border: none;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+
+[class*="portfolio__button--sm"] {
+  height: 36px !important;
+}
+
+.portfolio__button\:primary {
+  background-color: var(--primary);
+  color: var(--portfolio-white);
+}
+.portfolio__button\:primary:hover {
+  background-color: var(--primary-dark);
+}
+.portfolio__button\:secondary {
+  background-color: var(--secondary);
+  color: var(--portfolio-white);
+}
+.portfolio__button\:secondary:hover {
+  background-color: var(--secondary-light);
+}
+
+.flex\:column {
+  display: flex;
+  flex-direction: column;
+}
+.flex\:row {
+  display: flex;
+  flex-direction: row;
+}
+.flex\:row\:center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex\:row\:bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.gap\:1 {
+  gap: 4px;
+}
+.gap\:2 {
+  gap: 8px;
+}
+.gap\:3 {
+  gap: 12px;
+}
+.gap\:4 {
+  gap: 16px;
+}
+
+/* ---------------------------------------------------------------------------------------------
+	 Utils classes | END
+---------------------------------------------------------------------------------------------*/
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* --geist-page-width-with-margin: calc(var(--geist-page-width) + calc(2 * var(--geist-page-margin))); */
+
+body {
+  font-family: portfolio-geist, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background-color: var(--background);
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: #575252;
+}

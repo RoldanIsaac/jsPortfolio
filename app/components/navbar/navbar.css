@@ -1,26 +1,111 @@
 /* Estilos para el navbar */
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 nav {
-  background-color: #333;
+  background-color: transparent;
+  border-bottom: solid 1px #dddddd34;
   color: white;
-  padding: 10px 20px;
   position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 54px;
+  box-shadow: 0 1px 2px -1 var(--text);
+  box-shadow: 0 1px 3px 1 var(--text);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glassmorphism-light-1,
+.glassmorphism-dark-1 {
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  margin: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.glassmorphism-dark-1 {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 nav .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 20px;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: -2px;
+}
+.logo-link {
+  color: var(--primary);
+  text-decoration: none;
 }
 
-/* Estilo de los enlaces del navbar */
-nav ul {
+.logo-string {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  transition: all 100ms ease-in-out;
+}
+
+.logo-string li {
+  margin: 1.5px;
+}
+.logo-string:hover {
+  transform: scale(1.02);
+}
+.logo-string:hover > :nth-child(6) {
+  /* color: var(--primary); */
+  animation: flicker 2s;
+  color: white;
+  transform: scale(1.1);
+}
+
+.logo-string :nth-child(6) {
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+@keyframes flicker {
+  0% {
+    color: var(--primary);
+    transform: scale(1);
+  }
+  7% {
+    color: var(--secondary);
+  }
+  14% {
+    color: var(--primary);
+  }
+  21% {
+    color: var(--secondary);
+  }
+  40% {
+    color: var(--primary);
+  }
+  50% {
+    color: var(--secondary);
+  }
+  60% {
+    color: var(--primary);
+    transform: scale(1);
+  }
+  100% {
+    color: white;
+    transform: scale(1.1);
+  }
+}
+
+.navbar__links-container {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -29,22 +114,23 @@ nav ul {
   align-items: center;
 }
 
-nav ul li {
+.navbar__li {
   margin: 0 15px;
 }
 
-nav ul li a {
+.navbar__link {
   text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  color: var(--text);
+  font-size: 0.9rem;
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  letter-spacing: -0.05em;
 }
 
-nav ul li a:hover {
-  background-color: #007bff;
+.navbar__link:hover {
+  text-decoration: underline;
+  color: var(--primary-dark);
 }
 
 /* Estilos para el menú hamburguesa en dispositivos pequeños */
@@ -82,11 +168,11 @@ nav ul li a:hover {
     display: flex;
   }
 
-  nav ul li {
+  .navbar__li {
     margin: 10px 0;
   }
 
-  nav ul li a {
+  .navbar__link {
     padding: 10px 20px;
   }
 }
