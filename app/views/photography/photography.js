@@ -8,6 +8,21 @@ export class Photography extends Component {
       template: "app/views/photography/photography.html",
       styles: "app/views/photography/photography.css",
       script: () => {
+        let currentLabel = null;
+        window.addEventListener("scroll", updateGliderPosition(currentLabel));
+        window.addEventListener("resize", hideGlider);
+
+        // Not the radios due to display:none in CSS, which will avoid
+        // to get the current radio positions
+        document
+          .querySelectorAll(".glider-tabs__tab-label")
+          .forEach((label) => {
+            label.addEventListener("click", function () {
+              currentLabel = label;
+              updateGliderPosition(label);
+            });
+          });
+
         const photoCard = {
           url: "app/components/photo/photo-card.html",
           destinationId: "galery",
@@ -35,4 +50,25 @@ export class Photography extends Component {
       },
     });
   }
+}
+
+export function hideGlider() {
+  const glider = document.getElementById("glider");
+  glider.style.opacity = 0;
+}
+export function updateGliderPosition(currentLabel = null) {
+  if (!currentLabel) return;
+
+  const rect = currentLabel.getBoundingClientRect(); // Label position in window
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+
+  const glider = document.getElementById("glider");
+
+  glider.style.opacity = 1;
+
+  glider.style.top = rect.top + scrollTop + "px";
+  glider.style.left = rect.left + scrollLeft + "px";
+  glider.style.width = rect.width + "px";
+  glider.style.height = rect.height + "px";
 }
