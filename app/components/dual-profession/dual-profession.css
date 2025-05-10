@@ -17,5 +17,17 @@
   opacity: 0.8;
   margin: 1rem;
   height: 300px;
-  transform: rotateY("90deg");
+  transform: rotateZ(180deg);
+}
+
+@media (max-width: 962px) {
+  .dual-pofession-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .divider {
+    height: 4px;
+    transform: rotateZ(90deg);
+  }
 }
