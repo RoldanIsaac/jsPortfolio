@@ -11,6 +11,7 @@
   background-color: hsl(var(--hue), var(--saturation), var(--lightness));
   /*color: hsl(var(--hue), var(--saturation), var(--lightness)); */
 
+  white-space: nowrap;
   border-radius: 8px;
   padding: 0.25rem 0.5rem;
   font-size: 14px;

@@ -248,6 +248,14 @@
 	 Utils classes | END
 ---------------------------------------------------------------------------------------------*/
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* --geist-page-width-with-margin: calc(var(--geist-page-width) + calc(2 * var(--geist-page-margin))); */
+
 body {
   font-family: portfolio-geist, Arial, sans-serif;
   margin: 0;

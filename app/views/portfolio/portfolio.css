@@ -1,3 +1,7 @@
 .main-container {
   margin-top: 4rem;
 }
+
+.section-spacing {
+  margin: 7rem 11.5rem !important;
+}
