@@ -11,8 +11,8 @@
 .current__header {
   /* font-size: 1.8rem; */
   font-weight: bold;
-  margin: 1rem;
-  margin-top: 3rem;
+  margin: 3rem 1rem;
+
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .current__review {
-  max-width: 500px;
+  width: 400px;
   text-align: start;
   display: flex;
   flex-direction: column;
@@ -33,8 +33,7 @@
 
 .current__cards-container {
   position: relative;
-  width: 50%;
-  margin: 5rem;
+  margin: 1rem;
 }
 
 .current__cards-container .project-card {
@@ -44,14 +43,15 @@
 
 /* Transform project cards to create a 3D effect */
 .current__cards-container > :first-child {
-  top: -45px !important;
-  transform: translate(-90px) rotateZ(-11deg) !important;
+  top: -25px !important;
+  transform: translate(-160px) rotateZ(-18deg) !important;
 }
 .current__cards-container > :nth-child(2) {
-  top: -25px !important;
-  transform: translate(-40px) rotateZ(-4.5deg) !important;
+  top: 0px !important;
+  transform: translate(-80px) rotateZ(-4.5deg) !important;
 }
 .current__cards-container > :last-child {
+  top: 25px !important;
 }
 
 /* Hover effect */
@@ -65,6 +65,16 @@
 }
 .current__cards-container:hover > :last-child {
   transform: translate(1px) rotateZ(1deg) scale(1.1) !important;
+}
+
+@media (max-width: 1024px) {
+  .current__body {
+    flex-direction: column;
+  }
+
+  .current__cards-container {
+    display: none;
+  }
 }
 
 /* CHIPS */
