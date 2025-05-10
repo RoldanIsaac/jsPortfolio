@@ -1,12 +1,17 @@
+.pattern\:polka {
+  background-color: transparent;
+  background-image: radial-gradient(var(--primary) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+  height: 15%;
+  width: 15%;
+  left: 80%;
+  /* z-index: 9999; */
+  position: absolute;
+  transform: rotateZ(35deg);
+}
 
-.pattern\:polka{
-    background-color: transparent;
-    background-image: radial-gradient(#e32121 1.2px, transparent 1.2px);
-    background-size: 24px 24px;
-    height: 25%;
-    content: " ";
-    /* z-index: 9999; */
-    position: absolute;
-    top: 50%;
-    left: 60%;
+.pattern\:polka::before {
+  position: absolute;
+  content: " .";
+  opacity: 0;
 }
