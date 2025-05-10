@@ -1,7 +1,7 @@
 .banner__container {
   width: 100%;
   height: 228px;
-  background-color: var(--secondary-light);
+  background-color: var(--secondary-dark);
   margin: 8rem 0;
   display: flex;
   justify-content: space-around;

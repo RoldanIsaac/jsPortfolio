@@ -21,6 +21,21 @@
 
 .vercel-cards__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 12px;
+}
+
+@media only screen and (min-width: 1092px) {
+  .vercel-cards__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 1292px) {
+  .vercel-cards__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
 }

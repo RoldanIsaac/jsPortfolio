@@ -103,9 +103,11 @@
   --primary: hsl(33, 92%, 52%);
   --primary-dark: hsl(33, 91%, 32%);
 
+  --secondary-lighter: hsl(215, 11%, 51%);
+  --secondary-light: hsl(215, 11%, 61%);
   --secondary: hsl(215, 11%, 71%);
-  --secondary-dark: hsl(215, 11%, 51%);
-  --secondary-light: hsl(215, 11%, 91%);
+  --secondary-dark: hsl(215, 11%, 81%);
+  --secondary-darker: hsl(215, 11%, 91%);
 
   --accent: hsl(350, 73%, 63%);
 
