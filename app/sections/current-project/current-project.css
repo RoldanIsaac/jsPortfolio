@@ -79,6 +79,12 @@
   overflow: visible;
 }
 
+.chip-container > div {
+  border-radius: 8px;
+  border: transparent;
+  background-color: transparent !important;
+}
+
 .chip-container > :first-child {
   animation: fade 2s infinite;
 }
