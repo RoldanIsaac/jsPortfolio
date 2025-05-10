@@ -1,0 +1,12 @@
+
+.pattern\:polka{
+    background-color: transparent;
+    background-image: radial-gradient(#e32121 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+    height: 25%;
+    content: " ";
+    /* z-index: 9999; */
+    position: absolute;
+    top: 50%;
+    left: 60%;
+}
