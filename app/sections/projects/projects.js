@@ -63,18 +63,19 @@ export const vercelCards = [
     },
   },
   {
-    name: "vercelCardTwo1",
-    componentClass: VercelCardTwo,
-    selector: "#vercel-card-two-1",
-    props: {
-      title: "JsCalendar",
-      description: "A Js Calendar for free use.",
-    },
-  },
-  {
     name: "vercelCardTwo2",
     componentClass: VercelCardTwo,
     selector: "#vercel-card-two-2",
+    props: {
+      title: "ytDownloader",
+      description:
+        "Youtube downloader free of charge with Python and ElectronJs",
+    },
+  },
+  {
+    name: "vercelCardTwo1",
+    componentClass: VercelCardTwo,
+    selector: "#vercel-card-two-1",
     props: {
       title: "JsCalendar",
       description: "A Js Calendar for free use.",
