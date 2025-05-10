@@ -144,9 +144,9 @@
 .portfolio__hero {
   font-family: portfolio-geist;
 
-  font-weight: 900;
+  font-weight: 200;
   letter-spacing: -0.05em;
-  font-size: var(--font-hero);
+  font-size: calc(var(--font-hero) + 1.2rem);
   line-height: 1;
 
   /* Gradient Background in text */
@@ -157,7 +157,7 @@
 
 .portfolio__heading {
   font-family: portfolio-geist;
-  font-weight: 900;
+  font-weight: 300;
   letter-spacing: -0.05em;
   font-size: var(--font-heading);
   line-height: 1;
