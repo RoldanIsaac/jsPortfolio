@@ -14,6 +14,9 @@ const mountComponent = (name, component, selector = "#app") => {
 
 // Rutes definition
 const router = new Router({
+  "/jsPortfolio": () => mountComponent("portfolio", Portfolio),
+  "/jsPortfolio/": () => mountComponent("portfolio", Portfolio),
+  "jsPortfolio/": () => mountComponent("portfolio", Portfolio),
   "/": () => mountComponent("portfolio", Portfolio),
   "/photography": () => mountComponent("photography", Photography),
   "/projects": () => mountComponent("projects", Projects),
