@@ -1,0 +1,91 @@
+[class*="rotate\:22.5"] {
+  transform: rotateZ(22.5deg) !important;
+}
+[class*="rotate\:-22.5"] {
+  transform: rotateZ(22.5deg) !important;
+}
+[class*="rotate\:45"] {
+  transform: rotateZ(45deg) !important;
+}
+[class*="rotate\:-45"] {
+  transform: rotateZ(-45deg) !important;
+}
+[class*="rotate\:67.5"] {
+  transform: rotateZ(67.5deg) !important;
+}
+[class*="rotate\:-67.5"] {
+  transform: rotateZ(67.5deg) !important;
+}
+[class*="rotate\:90"] {
+  transform: rotateZ(90deg) !important;
+}
+
+[class*="top\:0"] {
+  top: 0%;
+}
+[class*="top\:-10"] {
+  top: -10%;
+}
+[class*="top\:10"] {
+  top: 10%;
+}
+[class*="top\:20"] {
+  top: 20%;
+}
+[class*="top\:30"] {
+  top: 30%;
+}
+[class*="top\:40"] {
+  top: 40%;
+}
+[class*="top\:50"] {
+  top: 50%;
+}
+[class*="top\:60"] {
+  top: 60%;
+}
+[class*="top\:60"] {
+  top: 60%;
+}
+[class*="top\:70"] {
+  top: 70%;
+}
+[class*="top\:80"] {
+  top: 80%;
+}
+[class*="top\:90"] {
+  top: 90%;
+}
+[class*="left\:0"] {
+  left: 0%;
+}
+[class*="left\:10"] {
+  left: 10%;
+}
+[class*="left\:20"] {
+  left: 20%;
+}
+[class*="left\:30"] {
+  left: 30%;
+}
+[class*="left\:40"] {
+  left: 40%;
+}
+[class*="left\:50"] {
+  left: 50%;
+}
+[class*="left\:60"] {
+  left: 60%;
+}
+[class*="left\:60"] {
+  left: 60%;
+}
+[class*="left\:70"] {
+  left: 70%;
+}
+[class*="left\:80"] {
+  left: 80%;
+}
+[class*="left\:90"] {
+  left: 90%;
+}
