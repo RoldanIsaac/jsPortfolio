@@ -5,5 +5,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 7rem 11.6rem !important;
+  margin: 7rem 8.5rem !important;
+}
+
+@media (max-width: 962px) {
+  .section-spacing {
+    margin: 7rem 5.5rem !important;
+  }
+}
+@media (max-width: 762px) {
+  .section-spacing {
+    margin: 7rem 4rem !important;
+  }
+}
+@media (max-width: 562px) {
+  .section-spacing {
+    margin: 7rem 2rem !important;
+  }
 }

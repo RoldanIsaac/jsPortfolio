@@ -36,7 +36,7 @@
 @media (max-width: 968px) {
   .banner__container {
     padding: 1rem 0 1rem 0;
-    padding-left: 40%;
+    padding-left: 30%;
     gap: 1rem;
     flex-direction: column;
     height: fit-content;
@@ -49,5 +49,14 @@
     border-right: solid 1px gray;
     align-items: start;
     padding-right: 3px;
+  }
+}
+
+@media (max-width: 568px) {
+  .banner__container {
+    padding-left: 25%;
+    flex-direction: column;
+    height: fit-content;
+    align-items: start;
   }
 }
