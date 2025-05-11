@@ -4,10 +4,8 @@
   background-size: 24px 24px;
   height: 15%;
   width: 15%;
-  left: 80%;
-  /* z-index: 9999; */
+  z-index: 1;
   position: absolute;
-  transform: rotateZ(35deg);
 }
 
 .pattern\:polka::before {

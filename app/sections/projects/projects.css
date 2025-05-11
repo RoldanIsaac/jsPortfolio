@@ -8,9 +8,14 @@
 
 .projects__header {
   /* font-size: 1.8rem; */
-  font-weight: bold;
-  margin: 2rem;
-  text-align: center;
+  font-weight: 300;
+  margin: 1rem;
+}
+
+.projects__caption {
+  width: 100%;
+  font-size: var(--font-text-sm);
+  color: var(--secondary);
 }
 
 .projects__body {
