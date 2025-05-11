@@ -6,6 +6,7 @@
   border: solid 1px #ccc;
   border-radius: 8px;
   min-height: 500px;
+  overflow: hidden;
 }
 
 .current__header {
@@ -24,11 +25,22 @@
 }
 
 .current__review {
-  width: 400px;
+  width: 500px;
   text-align: start;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .current__review {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 .current__cards-container {
