@@ -161,6 +161,7 @@ accent {
   background: var(--text-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
 }
 
 .portfolio__heading {
@@ -180,7 +181,6 @@ accent {
   font-family: portfolio-geist;
   font-weight: 400;
   letter-spacing: -0.05em;
-  padding-left: 0.5em;
   line-height: 1;
   font-size: var(--font-title);
   color: var(--secondary-dark);
