@@ -12,3 +12,68 @@
   flex-direction: row;
   gap: 0.6rem;
 }
+
+.carousel-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.carousel__indicators-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.indicator {
+  width: 40px;
+  height: 2.5px;
+  margin: 5px;
+  border-radius: 2px;
+  background-color: var(--primary);
+  opacity: 0.2;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.indicator.active {
+  opacity: 1;
+}
+
+.indicator:hover {
+  opacity: 1;
+}
+
+.carousel__slides-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide p {
+  color: var(--secondary-light);
+  font-size: 14px;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
