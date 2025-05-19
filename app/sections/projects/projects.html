@@ -5,7 +5,141 @@
     <span class="projects__caption">The stuff people do nowadays...</span>
   </div>
   <!-- Body | Cards -->
-  <div class="projects__body">
+
+  <div class="cards-container">
+    <style>
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 40px;
+        margin: auto;
+        width: 95%;
+      }
+
+      .project-card {
+        width: 100%;
+        background: transparent;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-card h3 {
+        margin-top: 8px;
+        font-size: 16px;
+      }
+
+      .project-card p {
+        color: #555;
+        font-size: 14px;
+        margin: 8px 0;
+      }
+
+      .project-card .icon {
+        font-size: 1em;
+        color: var(--primary);
+      }
+
+      .project-card a {
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: light;
+        font-size: 12px;
+      }
+      .project-card a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <div class="project-card">
+      <i class="fa-solid fa-calendar icon"></i>
+      <h3>Event Planner</h3>
+      <p>
+        App para organizar eventos con recordatorios automáticos y diseño
+        responsivo.
+      </p>
+      <a href="https://github.com/tuusuario/event-planner" target="_blank"
+        >Ver en GitHub</a
+      >
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-code icon"></i>
+      <h3>Code Snippets Hub</h3>
+      <p>Repositorio de fragmentos útiles en JavaScript, Python y más.</p>
+      <a href="https://github.com/tuusuario/code-snippets" target="_blank"
+        >Ver en GitHub</a
+      >
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-gears icon"></i>
+      <h3>DevOps Toolkit</h3>
+      <p>
+        Scripts para automatización de despliegue y monitoreo de servidores.
+      </p>
+      <a href="https://github.com/tuusuario/devops-toolkit" target="_blank"
+        >Ver en GitHub</a
+      >
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-mobile-screen icon"></i>
+      <h3>Responsive UI Kit</h3>
+      <p>Componentes HTML/CSS reutilizables para interfaces móviles.</p>
+      <a href="https://github.com/tuusuario/responsive-ui-kit" target="_blank"
+        >Ver en GitHub</a
+      >
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-lock icon"></i>
+      <h3>Auth System</h3>
+      <p>Autenticación segura con JWT, OAuth y verificación por email.</p>
+      <a href="https://github.com/tuusuario/auth-system" target="_blank"
+        >Ver en GitHub</a
+      >
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-database icon"></i>
+      <h3>DB Visualizer</h3>
+      <p>Herramienta para visualizar y editar estructuras de bases de datos.</p>
+      <a href="https://github.com/tuusuario/db-visualizer" target="_blank"
+        >Ver en GitHub</a
+      >
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-chart-line icon"></i>
+      <h3>Analytics Dashboard</h3>
+      <p>Dashboard interactivo con gráficos de rendimiento y tráfico.</p>
+      <a href="https://github.com/tuusuario/analytics-dashboard" target="_blank"
+        >Ver en GitHub</a
+      >
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-brain icon"></i>
+      <h3>AI Chatbot</h3>
+      <p>Chatbot en Node.js entrenado con NLP para atención al cliente.</p>
+      <a href="https://github.com/tuusuario/ai-chatbot" target="_blank"
+        >Ver en GitHub</a
+      >
+    </div>
+  </div>
+
+  <button class="portfolio__button:secondary">Load More</button>
+
+  <!-- <div class="projects__body">
     <div id="vercel-cards-container" class="vercel-cards__container">
       <div class="flex:col">
         <div id="vercel-card-two-1"></div>
@@ -17,5 +151,5 @@
         <div id="vercel-card-two-2"></div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
